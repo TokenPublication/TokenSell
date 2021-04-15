@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="7dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:id="@+id/relativeLayoutCardView"
+        >
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/imageViewImage"
+            android:src="@mipmap/ic_launcher"/>
+
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="77dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₺"
+            android:layout_weight="1"
+            android:layout_marginStart="25.5dp"
+            android:textColor="@color/purple_500"
+            android:id="@+id/textViewTLLogo"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="100"
+            android:textColor="@color/purple_500"
+            android:id="@+id/textViewPrice"
+            android:src="@mipmap/ic_launcher"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_gray"
+            android:layout_toRightOf="@id/imageViewImage"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-4dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:text="Description"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            android:textColor="@color/light_gray"
+            android:layout_toRightOf="@id/imageViewImage"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:maxWidth="600dp"
+            android:maxHeight="54dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/plusButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-2dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="3dp"
+            app:icon="@drawable/baseline_add_black_24dp"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+             />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/minusButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="3dp"
+            app:icon="@drawable/baseline_remove_black_24dp"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantityText"
+            android:text="Quantity: "
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="@color/light_gray"
+            android:layout_toLeftOf="@id/minusButton"
+            android:layout_marginRight="42dp"
+            android:layout_marginTop="69dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_gray"
+            android:layout_toLeftOf="@id/minusButton"
+            android:layout_marginRight="29dp"
+            android:layout_marginTop="64dp"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

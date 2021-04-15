@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyclerView" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ></androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+        app:navigationIcon="@drawable/baseline_toc_material_500_36"/>
+    ​
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:backgroundTint="@color/purple_500"
+        app:srcCompat="@drawable/outline_done_white_36"
+        app:tint="@color/white"
+        app:layout_anchor="@id/bar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintLayoutMini">
+    <TextView
+        app:layout_constraintEnd_toEndOf="@id/constraintLayoutMini"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayoutMini"
+        android:id="@+id/textViewTotalWriting"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="80dp"
+        android:layout_height="wrap_content"
+        android:text="Total: "
+        android:textColor="@color/purple_500"
+        android:textSize="20dp" />
+
+    <TextView
+        app:layout_constraintStart_toEndOf="@id/textViewTotalWriting"
+        app:layout_constraintBottom_toBottomOf="@id/constraintLayoutMini"
+        android:id="@+id/textViewTotalCheckout"
+        android:layout_width="60dp"
+        android:layout_marginBottom="13dp"
+        android:layout_height="wrap_content"
+        android:text="0 ₺"
+        android:textColor="@color/dark_gray"
+        android:textSize="20dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
