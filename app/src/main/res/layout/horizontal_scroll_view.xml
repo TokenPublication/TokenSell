@@ -9,7 +9,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnTemelGida"
+            android:id="@+id/btnHS1"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -19,10 +19,11 @@
             android:layout_marginBottom="5dp"
             android:padding="2dp"
             android:paddingLeft="5dp"
-            android:text="TEMEL GIDA" />
+            android:text="TEMEL GIDA"
+            android:tag="1"/>
 
         <Button
-            android:id="@+id/btnAkaryakit"
+            android:id="@+id/btnHS2"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -31,10 +32,11 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="AKARYAKIT" />
+            android:text="İÇECEK"
+            android:tag="2"/>
 
         <Button
-            android:id="@+id/btnAlkol"
+            android:id="@+id/btnHS3"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -43,10 +45,11 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="ALKOL" />
+            android:text="ALKOLLÜ İÇECEK"
+            android:tag="3"/>
 
         <Button
-            android:id="@+id/btnTatli"
+            android:id="@+id/btnHS4"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -55,10 +58,11 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="TATLI" />
+            android:text="PASTA"
+            android:tag="4"/>
 
         <Button
-            android:id="@+id/btnLastikBakim"
+            android:id="@+id/btnHS5"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -67,10 +71,11 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="LASTİK BAKIM" />
+            android:text="TATLI"
+            android:tag="5"/>
 
         <Button
-            android:id="@+id/btnPasta"
+            android:id="@+id/btnHS6"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -79,7 +84,34 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="PASTA" />
+            android:text="KONAKLAMA"
+            android:tag="6"/>
+
+        <Button
+            android:id="@+id/btnHS7"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="2dp"
+            android:text="LASTİK BAKIM"
+            android:tag="7"/>
+
+        <Button
+            android:id="@+id/btnHS8"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="2dp"
+            android:text="AKARYAKIT"
+            android:tag="8"/>
 
     </LinearLayout>
 

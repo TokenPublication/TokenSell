@@ -7,10 +7,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
         <Button
-            android:id="@+id/btnNine"
+            android:id="@+id/btnOne"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="9"
+            android:text="1"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -24,10 +24,10 @@
             android:layout_column="0"/>
 
         <Button
-            android:id="@+id/btnEight"
+            android:id="@+id/btnTwo"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="8"
+            android:text="2"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -41,10 +41,10 @@
             android:layout_column="1"/>
 
         <Button
-            android:id="@+id/btnSeven"
+            android:id="@+id/btnThree"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="7"
+            android:text="3"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -58,10 +58,10 @@
             android:layout_column="2"/>
 
         <Button
-            android:id="@+id/btnClear"
+            android:id="@+id/btnBackClear"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="C"
+            android:text="⌫"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -75,7 +75,7 @@
             android:layout_column="3"/>
 
         <Button
-            android:id="@+id/btnSix"
+            android:id="@+id/btnFour"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
@@ -87,7 +87,7 @@
             android:insetBottom="1dp"
             android:insetLeft="1dp"
             android:insetRight="1dp"
-            android:text="6"
+            android:text="4"
             android:textColor="@color/purple_500"
             android:textSize="25sp" />
 
@@ -111,10 +111,10 @@
             android:layout_column="1"/>
 
         <Button
-            android:id="@+id/btnFour"
+            android:id="@+id/btnSix"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="4"
+            android:text="6"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -128,10 +128,10 @@
             android:layout_column="2"/>
 
         <Button
-            android:id="@+id/btnBackClear"
+            android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="⌫"
+            android:text="C"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -144,10 +144,10 @@
             android:layout_row="1"
             android:layout_column="3"/>
         <Button
-            android:id="@+id/btnThree"
+            android:id="@+id/btnSeven"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="3"
+            android:text="7"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -161,10 +161,10 @@
             android:layout_column="0"/>
 
         <Button
-            android:id="@+id/btnTwo"
+            android:id="@+id/btnEight"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="2"
+            android:text="8"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -178,10 +178,10 @@
             android:layout_column="1"/>
 
         <Button
-            android:id="@+id/btnOne"
+            android:id="@+id/btnNine"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:text="1"
+            android:text="9"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"
@@ -198,7 +198,7 @@
             android:id="@+id/btnEnter"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:text="Go"
+            android:text="OK"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:textSize="25sp"
             android:layout_columnWeight="1"

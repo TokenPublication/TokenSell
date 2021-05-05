@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.recyclerviewwithcardview">
+    package="com.example.TokenSell">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_true"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_true_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
-        <activity android:name=".QuickSellActivity"></activity>
+        android:theme="@style/Theme.RecyclerViewWithCardView">
+        <activity android:name="com.example.TokenSell.QuickSellActivity"></activity>
+        <activity android:name="com.example.TokenSell.PreviousSalesActivity"></activity>
         <activity
-            android:name=".FirstActivity"
+            android:name="com.example.TokenSell.FirstActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.example.TokenSell.MainActivity" />
+        <receiver android:name="com.example.TokenSell.PowerCutReceiver" android:exported="true" android:enabled="true">
+            <intent-filter>
+                <action android:name="token.intent.ACTION_POWERCUT_RESULT" />
+            </intent-filter>
+        </receiver>
 
         <meta-data
             android:name="app_name"
@@ -33,6 +39,7 @@
         <meta-data
             android:name="sale_activity_name"
             android:value=".FirstActivity" />
+
     </application>
 
 </manifest>

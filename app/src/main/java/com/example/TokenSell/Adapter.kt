@@ -1,4 +1,4 @@
-package com.example.recyclerviewwithcardview
+package com.example.TokenSell
 
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 //Bu sınıfı oluşturmamızın nedeni yaptığımız tasarım ile model arasında bir veri akışı sağlamak.
 //Kısacası veriyi .xml'deki recyclerview'a adapte etmek
 
-class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener: (Int) -> Unit) : RecyclerView.Adapter<Adapter.ModelViewHolder>() {
+class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener: (Double) -> Unit) : RecyclerView.Adapter<Adapter.ModelViewHolder>() {
 
-    private var totalCheckoutAmount: Int = 0
+    private var totalCheckoutAmount: Double = 0.0
 
     class ModelViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val itemImage: ImageView = view.findViewById(R.id.imageViewImage)
@@ -21,7 +21,6 @@ class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener
         val itemDescription: TextView = view.findViewById(R.id.description)
         val itemQuantity : TextView = view.findViewById(R.id.quantity)
         val itemPrice: TextView = view.findViewById(R.id.textViewPrice)
-
         val buttonPlus = view.findViewById<Button>(R.id.plusButton)
         val buttonMinus = view.findViewById<Button>(R.id.minusButton)
 
@@ -29,7 +28,7 @@ class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener
             itemImage.setImageResource(item.image)
             itemTitle.setText(item.title)
             itemDescription.setText(item.description)
-            itemQuantity.setText(item.quantity.toString())
+            itemQuantity.setText(item.quantity.toInt().toString())
             itemPrice.setText(item.itemPrice.toString())
         }
     }
@@ -50,7 +49,7 @@ class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener
         holder.buttonPlus.setOnClickListener {
             println("+'ya tıkladık.")
             itemList.get(position).quantity = itemList.get(position).quantity + 1
-            holder.itemQuantity.setText(itemList.get(position).quantity.toString())
+            holder.itemQuantity.setText(itemList.get(position).quantity.toInt().toString())
             totalCheckoutAmount = totalCheckoutAmount + itemList.get(position).itemPrice
             checkoutListener(totalCheckoutAmount)
         }
@@ -59,7 +58,7 @@ class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener
             if(itemList.get(position).quantity > 0)
             {
             itemList.get(position).quantity = itemList.get(position).quantity - 1
-            holder.itemQuantity.setText(itemList.get(position).quantity.toString())
+            holder.itemQuantity.setText(itemList.get(position).quantity.toInt().toString())
             totalCheckoutAmount = totalCheckoutAmount - itemList.get(position).itemPrice
             checkoutListener(totalCheckoutAmount)
             }

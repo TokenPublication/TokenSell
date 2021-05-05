@@ -1,12 +1,9 @@
-package com.example.recyclerviewwithcardview
+package com.example.TokenSell
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 
 class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +12,7 @@ class FirstActivity : AppCompatActivity() {
 
         val buttonProducts = findViewById<Button>(R.id.buttonProducts)
         val buttonQuickSell = findViewById<Button>(R.id.buttonQuickSell)
+        val buttonPreviousSales = findViewById<Button>(R.id.buttonPreviousSales)
         val buttonExit = findViewById<Button>(R.id.buttonExit)
 
         buttonProducts.setOnClickListener{
@@ -24,6 +22,11 @@ class FirstActivity : AppCompatActivity() {
 
         buttonQuickSell.setOnClickListener{
             val intent = Intent(this@FirstActivity, QuickSellActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonPreviousSales.setOnClickListener {
+            val intent = Intent(this@FirstActivity, PreviousSalesActivity::class.java)
             startActivity(intent)
         }
 

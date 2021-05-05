@@ -18,7 +18,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:id="@+id/imageViewImage"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher_true"/>
 
 
         <LinearLayout
@@ -30,10 +30,10 @@
             android:layout_height="wrap_content"
             android:text="₺"
             android:layout_weight="1"
-            android:layout_marginStart="25.5dp"
+            android:layout_marginStart="19dp"
             android:textColor="@color/purple_500"
             android:id="@+id/textViewTLLogo"
-            android:src="@mipmap/ic_launcher"/>
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
             android:layout_weight="100"
             android:textColor="@color/purple_500"
             android:id="@+id/textViewPrice"
-            android:src="@mipmap/ic_launcher"/>
+            />
 
         </LinearLayout>
 
