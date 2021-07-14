@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-//Bu sınıfı oluşturmamızın nedeni yaptığımız tasarım ile model arasında bir veri akışı sağlamak.
+//Bu sınıfı oluşturmamızın nedeni yaptığımız tasarım ile data model arasında bir veri akışı sağlamak.
 //Kısacası veriyi .xml'deki recyclerview'a adapte etmek
 
 class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener: (Double) -> Unit) : RecyclerView.Adapter<Adapter.ModelViewHolder>() {
@@ -45,7 +45,7 @@ class Adapter(private val itemList: MutableList<ItemModel>, val checkoutListener
 
     override fun onBindViewHolder(holder: ModelViewHolder, position: Int) {
         //onCreateViewHolder() metodundan dönen veriyi bağlamak için kullanılır.???
-        holder.bindItems(itemList.get(position))
+        holder.bindItems(itemList[position])
         holder.buttonPlus.setOnClickListener {
             println("+'ya tıkladık.")
             itemList.get(position).quantity = itemList.get(position).quantity + 1
