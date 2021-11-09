@@ -66,7 +66,7 @@ class FirstActivity : AppCompatActivity() {
         autoCompleteTextView.setOnItemClickListener(OnItemClickListener { parent, view, position, id ->
             val selectedLang = autoCompleteTextView.text.toString()
 
-            when(selectedLang) {
+            when (selectedLang) {
                 "EN" -> {
                     setLocate("en")
                     println(selectedLang)
@@ -81,12 +81,13 @@ class FirstActivity : AppCompatActivity() {
                     val language = sharedPreferences.getString("My_Lang", "")
                     println("Local: " + language)
                 }
-                "TR" -> {setLocate("tr")
-                println(selectedLang)
+                "TR" -> {
+                    setLocate("tr")
+                    println(selectedLang)
                     val sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE)
                     val language = sharedPreferences.getString("My_Lang", "")
                     println("Local: " + language)
-            }
+                }
             }
 
 
@@ -103,38 +104,42 @@ class FirstActivity : AppCompatActivity() {
         arrayAdapter = ArrayAdapter(this, R.layout.dropdown_item, languages)
         autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
         autoCompleteTextView.setAdapter(arrayAdapter)
-        if((language=="RO") || (language=="EN") || (language=="TR")) autoCompleteTextView.setText(language)
+        if ((language == "RO") || (language == "EN") || (language == "TR")) autoCompleteTextView.setText(
+            language
+        )
 
         window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         println(".....asdaijcşoanca.scaşcşosmvimdfşvmdşfnv")
 
 
-        val buttonProducts = findViewById<Button>(R.id.buttonProducts)
+        //val buttonProducts = findViewById<Button>(R.id.buttonProducts)
         val buttonQuickSell = findViewById<Button>(R.id.buttonQuickSell)
-        val buttonPreviousSales = findViewById<Button>(R.id.buttonPreviousSales)
+        //val buttonPreviousSales = findViewById<Button>(R.id.buttonPreviousSales)
         val buttonExit = findViewById<Button>(R.id.buttonExit)
 
-
+        /*
         buttonProducts.setOnClickListener{
             val intent = Intent(this@FirstActivity, MainActivity::class.java)
             startActivity(intent)
         }
+        */
 
-        buttonQuickSell.setOnClickListener{
+
+        buttonQuickSell.setOnClickListener {
             val intent = Intent(this@FirstActivity, QuickSellActivity::class.java)
             startActivity(intent)
         }
-
+        /*
         buttonPreviousSales.setOnClickListener {
             val intent = Intent(this@FirstActivity, PreviousSalesActivity::class.java)
             startActivity(intent)
         }
+         */
 
-        buttonExit.setOnClickListener{
+        buttonExit.setOnClickListener {
             finishAndRemoveTask() //Finishes all activities in this task and removes it from the recent tasks list.
         }
-
 
 
     }

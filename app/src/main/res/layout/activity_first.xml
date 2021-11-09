@@ -51,9 +51,10 @@
             android:src="@drawable/token_sell_hq_v4" />
 
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="64dp"
             android:layout_height="30dp"
             android:text="EFT-POS"
+            android:textStyle="bold"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:textColor="@color/white"/>
@@ -77,20 +78,11 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:backgroundTint="@color/token_blue"
             android:text="@string/quick_sell"
             android:textSize="17dp" />
 
-        <Button
-            android:id="@+id/buttonProducts"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/token_blue"
-            android:text="@string/products"
-            android:textSize="17dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,14 +97,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/exit" />
-            <Button
-                android:id="@+id/buttonPreviousSales"
-                android:layout_marginEnd="4dp"
-                android:layout_marginStart="6dp"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/previous" />
 
 
         </LinearLayout>

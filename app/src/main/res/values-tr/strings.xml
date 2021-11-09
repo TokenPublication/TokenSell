@@ -12,7 +12,7 @@
     <string name="invoice_no">"Fatura No: "</string>
     <string name="sale_failed">Başarısız Satış!</string>
     <string name="categories">- KATEGORİLER -</string>
-    <string name="first_select_a_category">Tutarı giriniz.</string>
+    <string name="first_select_a_category">Lütfen bir tutar giriniz.</string>
     <string name="olive_oil">Zeytinyağı 1L</string>
     <string name="cheese">Peynir 1KG</string>
     <string name="olive">Zeytin 1KG</string>

@@ -11,7 +11,7 @@
     <string name="invoice_no">"Invoice No: "</string>
     <string name="payment_type">"Payment Type: "</string>
     <string name="categories">- CATEGORIES -</string>
-    <string name="first_select_a_category">Enter an amount</string>
+    <string name="first_select_a_category">Enter an amount.</string>
     <string name="olive_oil">Olive Oil 1L</string>
     <string name="cheese">Cheese 1KG</string>
     <string name="olive">Olive 1KG</string>

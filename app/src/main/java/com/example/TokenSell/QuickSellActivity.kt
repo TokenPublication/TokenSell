@@ -19,20 +19,21 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from AppCombatActivity will ensure that all the components work correctly.
+class QuickSellActivity : AppCompatActivity(),
+    Transformer { //Extending from AppCombatActivity will ensure that all the components work correctly.
 
 
-    private lateinit var textViewValue : TextView //This is a promise that we're going to initialize TextView later on.
-    private lateinit var textViewCategory : TextView //This is a promise that we're going to initialize TextView later on.
-    private lateinit var buttonHS1 : Button
-    private lateinit var buttonHS2 : Button
-    private lateinit var buttonHS3 : Button
-    private lateinit var buttonHS4 : Button
-    private lateinit var buttonHS5 : Button
-    private lateinit var buttonHS6 : Button
-    private lateinit var buttonHS7 : Button
-    private lateinit var buttonHS8 : Button
-    private lateinit var buttonArrayList : ArrayList<Button>
+    private lateinit var textViewValue: TextView //This is a promise that we're going to initialize TextView later on.
+    private lateinit var textViewCategory: TextView //This is a promise that we're going to initialize TextView later on.
+    private lateinit var buttonHS1: Button
+    private lateinit var buttonHS2: Button
+    private lateinit var buttonHS3: Button
+    private lateinit var buttonHS4: Button
+    private lateinit var buttonHS5: Button
+    private lateinit var buttonHS6: Button
+    private lateinit var buttonHS7: Button
+    private lateinit var buttonHS8: Button
+    private lateinit var buttonArrayList: ArrayList<Button>
     private lateinit var selectedCategory: String
 
     private lateinit var theInput: String //This value represents the input entered through keyboard
@@ -100,7 +101,8 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
 
         textViewCategory = findViewById(R.id.textViewCategory)
         textViewValue = findViewById(R.id.textViewValue)
-        textViewValue.text = "0" //This is to give an initial value(input) to the QuickSell activity.
+        textViewValue.text =
+            "0" //This is to give an initial value(input) to the QuickSell activity.
 
         buttonNine.setOnClickListener {
             inputPrinter("9")
@@ -140,19 +142,17 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
 
         buttonZero.setOnClickListener {
             theInput = textViewValue.text.toString()
-            if(!(isTheFirstDigitZero()))
-            {
+            if (!(isTheFirstDigitZero())) {
                 inputPrinter("0")
+            } else {
+                if (ifThereIsADot(theInput)) inputPrinter("0")
             }
-            else
-            {if(ifThereIsADot(theInput)) inputPrinter("0")}
         }
 
-        buttonDoubleZero.setOnClickListener{
+        buttonDoubleZero.setOnClickListener {
 
-                inputPrinter("0")
-
-                    inputPrinter("0")
+            inputPrinter("0")
+            inputPrinter("0")
 
         }
 
@@ -169,9 +169,8 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
         }
 
         buttonDot.setOnClickListener {
-            theInput= textViewValue.text.toString()
-            if(!ifThereIsADot(theInput))
-            {
+            theInput = textViewValue.text.toString()
+            if (!ifThereIsADot(theInput)) {
                 theInput += "."
                 textViewValue.text = theInput
             }
@@ -188,6 +187,7 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
                     val intent = Intent()
                     val bundle = Bundle()
 
+                    textViewCategory.text = ""
                     bundle.putString(TAG_ORDER_BODY, json)
                     intent.putExtras(bundle)
                     intent.component = ComponentName(PAYMENT_PROCESSOR_PACKAGE_NAME, appName)
@@ -197,7 +197,7 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
                     textViewCategory.setTextColor(getColor(R.color.red))
                     textViewCategory.setTypeface(Typeface.DEFAULT_BOLD)
                     if (selectedCategory != "") {
-                        textViewCategory.text =  getString(R.string.first_select_a_category)
+                        textViewCategory.text = getString(R.string.first_select_a_category)
                     }
                     if (theInputInt < 0.01) {
                         textViewCategory.text = getString(R.string.please_enter_amount)
@@ -228,8 +228,7 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
                     }
                 }
                 */
-            }
-            else textViewCategory.text = getString(R.string.please_enter_amount)
+            } else textViewCategory.text = getString(R.string.please_enter_amount)
         }
         /*
         buttonHS1.setOnClickListener {
@@ -324,64 +323,55 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
 
     }
 
-    private fun inputPrinter(value:String) {
+    private fun inputPrinter(value: String) {
+        textViewCategory.text = ""
         theInput = textViewValue.text.toString()
         //first check whether there is dot typed already i.e. fun ifThereIsADot(). If not
-        if(!ifThereIsADot(theInput))
-        {
+        if (!ifThereIsADot(theInput)) {
             //check if the number of num digits are less than 4 i.e. fun howManyNumDigits() < 4, then
-            if(howManyNumDigits(theInput) < 3)  if(isTheFirstDigitZero()) theInput = theInput.drop(1) + value else theInput += value
+            if (howManyNumDigits(theInput) < 3) if (isTheFirstDigitZero()) theInput =
+                theInput.drop(1) + value else theInput += value
             //else do nothing
-        }
-        else
-        {
+        } else {
             //check if the number of decimal digits are less than 2 i.e. fun howManyDecDigits() < 2, then
-            if(howManyDecimalDigits(theInput) < 2) theInput = theInput + value
+            if (howManyDecimalDigits(theInput) < 2) theInput = theInput + value
             //else do nothing
         }
         textViewValue.text = theInput
     }
 
-    private fun ifThereIsADot(value: String) : Boolean {
-        if(value.contains(".")) return true
+    private fun ifThereIsADot(value: String): Boolean {
+        if (value.contains(".")) return true
         return false
     }
 
-    private fun howManyNumDigits(value: String) : Int {
-        if(ifThereIsADot(value)) {
+    private fun howManyNumDigits(value: String): Int {
+        if (ifThereIsADot(value)) {
             val numPart: String = value.split(".")[0]
             return numPart.length
-        }
-        else
-        {
+        } else {
             return value.length
         }
     }
 
-    private fun howManyDecimalDigits(value: String) : Int {
-        if(ifThereIsADot(value)) {
+    private fun howManyDecimalDigits(value: String): Int {
+        if (ifThereIsADot(value)) {
             val numPart: String = value.split(".")[1]
             return numPart.length
-        }
-        else
-        {
+        } else {
             return 0
         }
     }
 
-    private fun isTheFirstDigitZero() : Boolean {
+    private fun isTheFirstDigitZero(): Boolean {
         theInput = textViewValue.text.toString().trim()
-        if(theInput.equals(""))
-        {
-        println("So the first digit is not zero. Cuzz there is no input typed.")
-        return false
-        }
-        else
-        {
-            if(theInput[0] == '0') {
+        if (theInput.equals("")) {
+            println("So the first digit is not zero. Cuzz there is no input typed.")
+            return false
+        } else {
+            if (theInput[0] == '0') {
                 return true
-            }
-            else return false
+            } else return false
         }
     }
 /*
@@ -404,70 +394,78 @@ class QuickSellActivity : AppCompatActivity(), Transformer { //Extending from Ap
 
     */
 
-    fun createJSONSalesData(amount: Double):MinJSONModel {
+    fun createJSONSalesData(amount: Double): MinJSONModel {
         val theInputDouble = textViewValue.text.toString().toDouble()
         val formattedModels: MutableList<MinJSONModel> = mutableListOf<MinJSONModel>()
-        val onlyCustomerInfo: CustomerInfo = CustomerInfo("99999999999", "George Ivan", "1st District", "Bucureşti", "România")
+        val onlyCustomerInfo: CustomerInfo =
+            CustomerInfo("99999999999", "George Ivan", "1st District", "Bucureşti", "România")
 
-        formattedModels.add(MinJSONModel(
+        formattedModels.add(
+            MinJSONModel(
 
-            (amount * 100).toInt())
+                (amount * 100).toInt()
+            )
 
         )
 
-        if(theInputDouble > 500)
+        if (theInputDouble > 500)
             return MinJSONModel((amount * 100).toInt())
         else return MinJSONModel((amount * 100).toInt())
     }
 
-    override fun onActivityResult(
-        requestCode: Int,
-        resultCode: Int,
-        data: Intent?
-    ) { //Dönen mesajı yakalamak için.
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == PAYMENT_ACTIVITY_RESULT_CODE && resultCode == Activity.RESULT_OK) {
-            val message = data!!.getStringExtra("paymentBody")
-            val sharedPref = getSharedPreferences("sharedPref", MODE_PRIVATE)
+override fun onActivityResult(
+    requestCode: Int,
+    resultCode: Int,
+    data: Intent?
+) { //Dönen mesajı yakalamak için.
 
-            val eachSale: Sale =
-                Sale(
-                    convertStatus(message),
-                    SimpleDateFormat("dd.MM.yyyy HH:mm").format(Date()),
-                    convertInvNo(message),
-                    totalAmount(message),
-                    getPaymentType(message)
-                )
+    super.onActivityResult(requestCode, resultCode, data)
+    if (requestCode == PAYMENT_ACTIVITY_RESULT_CODE && resultCode == Activity.RESULT_OK) {
+        val message = data!!.getStringExtra("paymentBody")
 
+        /*
+        val sharedPref = getSharedPreferences("sharedPref", MODE_PRIVATE)
 
-            //salesList.add(0, eachSale) //Her yeni satışı listenin en başına ekliyoruz.
-            prefsConfig.writeListInPref(this, salesList)
-            println("normal *****_ $message")
-            //Satıştan sonra ana ekrana atmak için
-            val intent = Intent(this@QuickSellActivity, FirstActivity::class.java)
-            startActivity(intent)
+        val eachSale: Sale =
+            Sale(
+                convertStatus(message),
+                SimpleDateFormat("dd.MM.yyyy HH:mm").format(Date()),
+                convertInvNo(message),
+                totalAmount(message),
+                getPaymentType(message)
+            )
 
 
-        }
+        //salesList.add(0, eachSale) //Her yeni satışı listenin en başına ekliyoruz.
+        prefsConfig.writeListInPref(this, salesList)
+         */
+        println("returning message: $message")
+        //Satıştan sonra ana ekrana atmak için
+        val intent = Intent(this@QuickSellActivity, FirstActivity::class.java)
+        startActivity(intent)
+
+
     }
+}
+
 
 
     @SuppressLint("ResourceAsColor")
     private fun onlyOneCategorySelected(whichButton: String) {
 
-            selectedCategory = whichButton
-            textViewCategory.setTextColor(getColor(R.color.token_blue))
-            textViewCategory.setTypeface(Typeface.DEFAULT_BOLD)
-            textViewCategory.text = whichButton
-            buttonArrayList.forEach {
-                (it as MaterialButton).apply {
-                    // set material button background tint list as a single color
-                    //backgroundTintList = ColorStateList.valueOf(Color.rgb(0,118,169))
-                    backgroundTintList = ColorStateList.valueOf(Color.rgb(98,0,238))
-                    // set material button background tint mode
-                    backgroundTintMode = PorterDuff.Mode.SRC_ATOP
-                }
+        selectedCategory = whichButton
+        textViewCategory.setTextColor(getColor(R.color.token_blue))
+        textViewCategory.setTypeface(Typeface.DEFAULT_BOLD)
+        textViewCategory.text = whichButton
+        buttonArrayList.forEach {
+            (it as MaterialButton).apply {
+                // set material button background tint list as a single color
+                //backgroundTintList = ColorStateList.valueOf(Color.rgb(0,118,169))
+                backgroundTintList = ColorStateList.valueOf(Color.rgb(98, 0, 238))
+                // set material button background tint mode
+                backgroundTintMode = PorterDuff.Mode.SRC_ATOP
             }
+        }
 
     }
 
