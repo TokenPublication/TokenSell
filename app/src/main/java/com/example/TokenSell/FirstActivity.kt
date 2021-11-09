@@ -138,7 +138,7 @@ class FirstActivity : AppCompatActivity() {
          */
 
         buttonExit.setOnClickListener {
-            finishAndRemoveTask() //Finishes all activities in this task and removes it from the recent tasks list.
+            finishAffinity(); //Finishes the current activity and all parent activities, but it works only in Android 4.1 or higher.
         }
 
 
