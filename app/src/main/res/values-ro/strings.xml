@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TokenSell</string>
+    <string name="quick_sell">VANZARE RAPIDA</string>
+    <string name="products">Produse</string>
+    <string name="exit">Lesire</string>
+    <string name="previous">ISTORIC</string>
+    <string name="total">"Total: "</string>
+    <string name="sale_successful">Vanzare cu succes!</string>
+    <string name="date">"Data: "</string>
+    <string name="payment_type">"Tip plata: "</string>
+    <string name="invoice_no">"Numar bon: "</string>
+    <string name="sale_failed">Vanzare esuata!</string>
+    <string name="categories">- CATEGORII -</string>
+    <string name="first_select_a_category">İntroduceți suma.</string>
+    <string name="olive_oil">Ulei de Masline 1L</string>
+    <string name="cheese">Branza 1KG</string>
+    <string name="olive">Masline 1KG</string>
+    <string name="pizza">Pizza</string>
+    <string name="kefir">Chefir 450ml</string>
+    <string name="chips">Chipsuri</string>
+    <string name="toothpaste">Pasta de Dinti</string>
+    <string name="quantity">"Cantitate: "</string>
+    <string name="no_sales">Nu s-au găsit date privind vânzările.</string>
+    <string name="staple_food">MÂNCARE DE BAZĂ</string>
+    <string name="beverage">BĂUTURĂ</string>
+    <string name="alcohol">ALCOOL</string>
+    <string name="pasta">PASTE</string>
+    <string name="dessert">DESERT</string>
+    <string name="accommodation">CAZARE</string>
+    <string name="tire_repair">REPARAȚIA ANVELOPELOR</string>
+    <string name="gasoline">BENZINĂ</string>
+    <string name="please_enter_amount">Vă rugăm să introduceți o sumă.</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TokenSell</string>
+    <string name="quick_sell">HIZLI SAT</string>
+    <string name="products">Ürünler</string>
+    <string name="exit">Çıkış</string>
+    <string name="previous">GEÇMİŞ</string>
+    <string name="total">"Toplam: "</string>
+    <string name="sale_successful">Başarılı Satış!</string>
+    <string name="date">"Tarih: "</string>
+    <string name="payment_type">"Ödeme Tipi: "</string>
+    <string name="invoice_no">"Fatura No: "</string>
+    <string name="sale_failed">Başarısız Satış!</string>
+    <string name="categories">- KATEGORİLER -</string>
+    <string name="first_select_a_category">Tutarı giriniz.</string>
+    <string name="olive_oil">Zeytinyağı 1L</string>
+    <string name="cheese">Peynir 1KG</string>
+    <string name="olive">Zeytin 1KG</string>
+    <string name="pizza">Pizza</string>
+    <string name="kefir">Kefir 450ml</string>
+    <string name="chips">Cips</string>
+    <string name="toothpaste">Diş Macunu</string>
+    <string name="quantity">"Adet: "</string>
+    <string name="no_sales">Gösterilecek Satış Yok!</string>
+    <string name="staple_food">TEMEL GIDA</string>
+    <string name="beverage">İÇECEK</string>
+    <string name="alcohol">ALKOL</string>
+    <string name="pasta">MAKARNA</string>
+    <string name="dessert">TATLI</string>
+    <string name="accommodation">KONAKLAMA</string>
+    <string name="tire_repair">TEKER TAMİR</string>
+    <string name="gasoline">AKARYAKIT</string>
+    <string name="please_enter_amount">Lütfen bir tutar giriniz.</string>
+</resources>

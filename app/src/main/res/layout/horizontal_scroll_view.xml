@@ -19,7 +19,7 @@
             android:layout_marginBottom="5dp"
             android:padding="2dp"
             android:paddingLeft="5dp"
-            android:text="TEMEL GIDA"
+            android:text="@string/staple_food"
             android:tag="1"/>
 
         <Button
@@ -32,7 +32,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="İÇECEK"
+            android:text="@string/beverage"
             android:tag="2"/>
 
         <Button
@@ -45,7 +45,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="ALKOLLÜ İÇECEK"
+            android:text="@string/alcohol"
             android:tag="3"/>
 
         <Button
@@ -58,7 +58,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="PASTA"
+            android:text="@string/pasta"
             android:tag="4"/>
 
         <Button
@@ -71,7 +71,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="TATLI"
+            android:text="@string/dessert"
             android:tag="5"/>
 
         <Button
@@ -84,7 +84,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="KONAKLAMA"
+            android:text="@string/accommodation"
             android:tag="6"/>
 
         <Button
@@ -97,7 +97,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="LASTİK BAKIM"
+            android:text="@string/tire_repair"
             android:tag="7"/>
 
         <Button
@@ -110,7 +110,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:padding="2dp"
-            android:text="AKARYAKIT"
+            android:text="@string/gasoline"
             android:tag="8"/>
 
     </LinearLayout>

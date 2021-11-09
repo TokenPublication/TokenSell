@@ -1,12 +1,24 @@
 package com.example.TokenSell
 
+import android.content.res.Resources
+
 interface Transformer {
     fun convertStatus(message: String?): String {
 
         val status = message!!.substringAfter("s\":").substring(0, 1)
-        println(status)
-        if (status == "0") return "Başarılı Satış"
-        return "Başarısız Satış"
+
+        println("message: " + message)
+
+        when(status)
+        {
+            "0" -> return "Sale Successful"
+            "-1"-> return "User Canceled"
+            "1" -> return "Missing Space"
+            "2" -> return "Invalid EInvoice Customer"
+            "3" -> return "Integrator Error"
+            "4" -> return "Network Error"
+        }
+        return "Sale Failed"
     }
 
     fun convertInvNo(message: String?): String {
@@ -39,7 +51,7 @@ interface Transformer {
 
     fun getPaymentType(message: String?): String {
 
-        if (catchPaymentCount(message) > 1) return "Nakit + Kredi Kartı"
+        if (catchPaymentCount(message) > 1) return "Cash + Credit Card"
         else {
             val paymentType =
                 message!!.substringAfter("cription\":").substring(1, 15).substringBefore("\"")

@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/quantityText"
-            android:text="Quantity: "
+            android:text="@string/quantity"
             android:textSize="18sp"
             android:textStyle="normal"
             android:textColor="@color/light_gray"

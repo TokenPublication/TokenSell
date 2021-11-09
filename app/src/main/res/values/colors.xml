@@ -10,4 +10,7 @@
     <color name="token_blue">#0076A9</color>
     <color name="light_gray">#a9a9a9</color>
     <color name="dark_gray">#504F4F</color>
+    <color name="red">#E60F0F</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#fff</color>
+
 </resources>

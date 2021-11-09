@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">TokenSell</string>
+    <string name="quick_sell">QUICK SELL</string>
+    <string name="products">Products</string>
+    <string name="exit">EXIT</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="total">"Total: "</string>
+    <string name="sale_successful">Sale Successful!</string>
+    <string name="sale_failed">Sale Failed!</string>
+    <string name="date">Date :</string>
+    <string name="invoice_no">"Invoice No: "</string>
+    <string name="payment_type">"Payment Type: "</string>
+    <string name="categories">- CATEGORIES -</string>
+    <string name="first_select_a_category">Enter an amount</string>
+    <string name="olive_oil">Olive Oil 1L</string>
+    <string name="cheese">Cheese 1KG</string>
+    <string name="olive">Olive 1KG</string>
+    <string name="pizza">Pizza</string>
+    <string name="kefir">Kefir 450ml</string>
+    <string name="chips">Chips</string>
+    <string name="toothpaste">Toothpaste</string>
+    <string name="quantity">"Quantity: "</string>
+    <string name="no_sales">No sales data has been found.</string>
+    <string name="staple_food">STAPLE FOOD</string>
+    <string name="beverage">BEVERAGE</string>
+    <string name="alcohol">ALCOHOL</string>
+    <string name="pasta">PASTA</string>
+    <string name="dessert">DESSERT</string>
+    <string name="accommodation">ACCOMMODATION</string>
+    <string name="tire_repair">TIRE REPAIR</string>
+    <string name="gasoline">GASOLINE</string>
+    <string name="please_enter_amount">Please enter an amount.</string>
+
+    <string-array name="languages">
+        <item>EN</item>
+        <item>RO</item>
+        <item>TR</item>
+    </string-array>
+
 </resources>
